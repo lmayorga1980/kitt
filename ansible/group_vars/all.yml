@@ -1,0 +1,7 @@
+ansible_user: "kitchen"
+ansible_password: "{{ lookup('env', 'KITCHEN_PWD')}}"
+ansible_port: 5986
+ansible_connection: winrm
+ansible_winrm_transport: basic
+ansible_winrm_read_timeout_sec: 30
+ansible_winrm_server_cert_validation: ignore

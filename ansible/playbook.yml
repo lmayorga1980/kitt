@@ -1,0 +1,13 @@
+---
+- name: "sample provisioning"
+  hosts: all 
+  gather_facts: yes
+  tasks:
+    - name: Set timezone to eastern timezone
+      win_timezone:
+        timezone: Eastern Standard Time
+    - name: Install git
+      win_chocolatey:
+        name: git
+        state: present
+      
